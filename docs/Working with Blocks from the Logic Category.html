@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Работа с блокове от категория Logic &#8212; Block-based programming in MakeCode</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Работа с блокове от категорията Loops" href="Working with Blocks from the Loops Category.html" />
+    <link rel="prev" title="Работа с блокове от категорията Math and Variables" href="Working with Blocks from the Math and Variables Categories.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in MakeCode</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="logic">
+<h1>Работа с блокове от категория Logic<a class="headerlink" href="#logic" title="Permalink to this headline">¶</a></h1>
+<p>Програмите, които създадохме досега бяха изпълнени блок по блок, от първия до последния. Този процес на изграждане на програма се нарича последователен или линеен. В него е невъзможно да пропуснеш блок.
+Всички блокове в <img alt="onstart" src="_images/s20.png" /> се изпълняват веднъж, а тези в <img alt="forever" src="_images/s1.png" /> множество пъти.</p>
+<p>Но може да се наложи да промените начина, по който програмата се изпълнява.</p>
+<p>Например, ако създавате програма, която ще се използва от по-млади ученици за изучаване на изчисления, може да искате да включите конкретни блокове, които да предлагат правилния отговор, или може да искате да използвате напълно различни блокове, които да осигуряват коментариза неправилните отговори.</p>
+<p>Основавайки се на верен или грешен отговор би означавало, че може да се наложи да използваме различни комбинации от блокове. Затова програмата се разклонява, изпълнявайки една посочена поредност от блокове за сметка на друга.</p>
+<p>Във всекидневието си всеки от вас взима решения и продължава деня си, базирайки се на тях. Например, температурата в класната стая е 30 градуса по Целзий и искате да вклюючите климатика. Следващата ви стъпка би била да проверите температурата в стаята и да решите дали да пуснете климатика.</p>
+<p>Същото е и с програмирането.</p>
+<p>С оглед на взимането на решения, MakeCode  предлага:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Сравнителни оператори</p></li>
+<li><p>Блокове за взимане на решения (условни блокове, които разклоняват програмата)</p></li>
+</ul>
+</div></blockquote>
+<img alt="_images/p59.png" class="align-center" src="_images/p59.png" />
+<img alt="_images/p60.png" class="align-center" src="_images/p60.png" />
+<p>Използвайки сравнителен оператор, можете да сравнявате стойности и да установите дали едната е по-голяма/малка от другата или двете са равни. Резултатът може да бъде TRUE или FALSE.</p>
+
+            <div class="course-box course-box-question course-content">
+            <ul data-component="multiplechoice" data-multipleanswers="false"  id="L6Z1">
+            <p>Q-8: Температурата в стаята е 28 градуса по Целзий. Анализирайте блоковете на фигурата и отбележете вярното твърдение.</p>
+<img alt="_images/p61.png" class="align-center" src="_images/p61.png" />
+
+            <li data-component="answer"  id="L6Z1_opt_a">Като резултат от задействането на блок А, програмата ще покаже стойността на температурата в стаята.</li><li data-component="feedback" id="L6Z1_opt_a">Грешен отговор!</li>
+            
+            <li data-component="answer" data-correct id="L6Z1_opt_b">Задействането на А и Б ще има енакъв резултат-програмата ще впише температурата на стаята.</li><li data-component="feedback" id="L6Z1_opt_b">Браво!</li>
+            
+            <li data-component="answer"  id="L6Z1_opt_c">Като резултат от задействането на блок В, програмата ще покаже малък кръст.</li><li data-component="feedback" id="L6Z1_opt_c">Грешен отговор!</li>
+            
+
+            </ul>
+            </div>
+            <p>Хайде да напришем малко програми!</p>
+<p>Ако случайно избрано число от, 0 до 100, е четно, трябва да въведете текста „Числото е четно.“, а ако е нечетно-„Числото е нечетно.“</p>
+<p>Кога числото е четно и кога-нечетно? Ако използваме цяло деление и разделим на числото 2 и няма остатък, то числото е четно. Ако остане остатък 1, то числото е нечетно.</p>
+<p>Например, ако чрез цяло деление разделим 10 на 2, резултатът би бил 5, защото 2*5=10. Ако разделим 9 на 2, ще получим 4и остатък 1, защото 4*2=8. Така можем да заключим, че ако дадено число, разделено чрез цяло деление, няма остатък, то числото е четно, а ако има остатък-то е нечетно.</p>
+<p>В MakeCode можем да използваме цяло деление чрез операцията <img alt="deljenje" src="_images/p62.png" />, и остатъка чрез блока <img alt="celobrojno" src="_images/p63.png" />, което осигурява стойност за остатъка.</p>
+<p>Основавайки се на предишния урок, ще дефинираме промеливата <code class="docutils literal notranslate"><span class="pre">Number</span></code>, която съхранява стойностите, добити на чрез блока <img alt="pickrandom" src="_images/p49.png" />, или по-точно, променливата <code class="docutils literal notranslate"><span class="pre">Number</span></code> ще получи стойност на случаен принцип в интервала от <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">до</span> <span class="pre">100</span></code>.</p>
+<p>Следващата стъпка би била да проверим дали има остатък в цялото деление на числото на 2. Ако е вярно, че няма остатък, тогава съобщението „Числото е четно.“ ще се покаже. Иначе, ако условието не е изпълнено и има остатък, тогава ще се появи съобщението „Числото е нечетно.“</p>
+<p>Преди да проверим условието, ще трябва да създадем променливата <code class="docutils literal notranslate"><span class="pre">Remainder</span></code>, и да въведем стойности за цяло деление на <code class="docutils literal notranslate"><span class="pre">Number</span></code> и <code class="docutils literal notranslate"><span class="pre">number</span> <span class="pre">2</span></code>:</p>
+<img alt="_images/p64.png" class="align-center" src="_images/p64.png" />
+<p>Сега, следващата стъпка би била да проверим дали числото е нечетно или не. Това ще стане чрез представянето на блока <code class="docutils literal notranslate"><span class="pre">if....then...</span> <span class="pre">else</span></code> и сравнителен оператор. Ако променливата Остатък е 0, то числото е четно и ще се покаже съобщението „Числото е четно“. Иначе, ако остатъкът не е 0, то числото е нечетно и трябва да се покаже съобщението „Числото е нечетно.“</p>
+<img alt="_images/p65.png" class="align-center" src="_images/p65.png" />
+<p>Крайният резултат:</p>
+<img alt="_images/p66.png" class="align-center" src="_images/p66.png" />
+<p>Можете да видите кода в този линк: <a class="reference external" href="https://makecode.microbit.org/_WDmbuk3kKXW5">https://makecode.microbit.org/_WDmbuk3kKXW5</a></p>
+<p>За да тестваме програмата, ще използваме симулатора, натискайки бутона <img alt="play" src="_images/p3.png" />.</p>
+<p><strong>Задача:</strong> Създайте програма, която симулира хвърляне на зарове. Ако резултатът от хвърлянето (движение, разтрисане е отчетено) е 1, то това число да бъде представено от 1 точка; ако резултатът е 2-от 2 точки и т.н.</p>
+<p>Сравнете решението си с нашето: <a class="reference external" href="https://makecode.microbit.org/_HsxKqAC90d5m">https://makecode.microbit.org/_HsxKqAC90d5m</a></p>
+<p><strong>Допълнение:</strong> Можете да използвате логически оператори за свързване на условия.</p>
+<p>В MakeCode логическите оператори са представени, както следва:</p>
+<p><img alt="and" src="_images/s50.png" /> - свързва две условия и дава отговор True само ако и двете са верни.</p>
+<p><img alt="or" src="_images/s511.png" /> - свързва две условия и дава отговор True ако резултатът на поне едно от тях е верен.</p>
+<p><a class="reference internal" href="_images/s52.png"><img alt="no" src="_images/s52.png" style="width: 100px;" /></a> - се поставя пред едно условие, дава отговор True ако условието не е изпълнено.</p>
+<p>Условието за проверка, че измерената температура е по-висока от 28, а светлинната наситеност е по-висока от 150, се проверява чрез този блок:</p>
+<img alt="_images/p67.png" class="align-center" src="_images/p67.png" />
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Работа с блокове от категорията Math and Variables' data-toggle="tooltip"><a href="Working with Blocks from the Math and Variables Categories.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Работа с блокове от категорията Loops' data-toggle="tooltip"><a href="Working with Blocks from the Loops Category.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Работа с блокове от категорията Math and Variables' data-toggle="tooltip"><a href="Working with Blocks from the Math and Variables Categories.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Работа с блокове от категорията Loops' data-toggle="tooltip"><a href="Working with Blocks from the Loops Category.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

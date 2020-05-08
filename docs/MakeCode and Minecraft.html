@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Minecraft-Основни характирестики и компоненти &#8212; Block-based programming in MakeCode</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Задача - Здравей, Свят" href="Project Task - Hello World.html" />
+    <link rel="prev" title="Задача-Средното копче" href="Project Task - Middle Button.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in MakeCode</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="minecraft">
+<h1>Minecraft-Основни характирестики и компоненти<a class="headerlink" href="#minecraft" title="Permalink to this headline">¶</a></h1>
+<p>Minecraft е изключително популярна, забавна и креативна 3D игра, където играчите използват наличните средства, за да създават структури или други уреди. Има много начини, по които Minecraft може да се използва за развиване на креативността и умението за решаване на проблеми на играчите.</p>
+<p>Всичко, което програмирате с MakeCode ще има моментален ефект върху вашия Minecraft свят, щом задействате програмата. Това е чудесен начин да се научите да програмирате, защото ще можете да видите визуално ефекта от своя код. Тази моментална обратна връзка ще ви помогне да решите проблеми, да видите какво влияние и промени оказвате на игралния свят на Minecraft. Тази обратна информация, получена от играта, може да бъде използвана за повтаряне или изменяне на кода.</p>
+<p>В тази част ще разберете как да обедините Minecraft и писането на кодове чрез MakeCode и да разширите и контролирате Minecraft средата.</p>
+<div class="section" id="minecraft-education-edition">
+<h2>Инсталиране на Minecraft: Education Edition<a class="headerlink" href="#minecraft-education-edition" title="Permalink to this headline">¶</a></h2>
+<p>За да инсталирате пакета, трябва да завършите следните стъпки.</p>
+<p><strong>Стъпка 1.</strong></p>
+<p>Свалете Minecraft: Education Edition от линка: <a class="reference external" href="https://education.minecraft.net/get-started/download">https://education.minecraft.net/get-started/download</a>.
+За да свалите на пакета, ще ви трябва достъп чрез акаунта, създаден от училището ви (помолете учител за помощ).</p>
+<p><strong>Стъпка 2.</strong></p>
+<p>Свалете Minecraft: Education Edition на компютъра си.</p>
+<img alt="_images/23.png" class="align-center" src="_images/23.png" />
+</div>
+<div class="section" id="minecraft-makecode">
+<h2>Свързване на Minecraft и MakeCode<a class="headerlink" href="#minecraft-makecode" title="Permalink to this headline">¶</a></h2>
+<p><strong>Стъпка 1.</strong></p>
+<p>Отворете Minecraft на компютъра си и влезте в своя акаунт</p>
+<img alt="_images/1.png" class="align-center" src="_images/1.png" />
+<p><strong>Стъпка 2.</strong></p>
+<p>Създайте свят, натискайки бутона Play.</p>
+<img alt="_images/31.png" class="align-center" src="_images/31.png" />
+<p>Натиснете бутона <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">New</span></code>  в диалоговия прозорец <code class="docutils literal notranslate"><span class="pre">Worlds</span></code>. тук можете да намерите и някои модели на вече създадени светове. Своя собствен свят ще създадете като натиснете бутона <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">World</span></code>.</p>
+<img alt="_images/5_.png" class="align-center" src="_images/5_.png" />
+<p><strong>Стъпка 3.</strong></p>
+<p>Прозорец ще се отвори, чрез който ще настроите своя свят. Ще оставим всичко, както е, засега, освен частта <code class="docutils literal notranslate"><span class="pre">Cheats</span></code>, където ще плъзнем бутона <code class="docutils literal notranslate"><span class="pre">Activate</span> <span class="pre">Cheats</span></code> на позицията <code class="docutils literal notranslate"><span class="pre">ON</span></code>, за да можете да кодирате Minecraft чрез MakeCode.</p>
+<img alt="_images/7_.png" class="align-center" src="_images/7_.png" />
+<p><strong>Стъпка 4.</strong></p>
+<p>След като сме готови с настройките за новия ни свят, които можем да променим, когато пожелаем, ще натиснем бутона <code class="docutils literal notranslate"><span class="pre">Create</span></code>.</p>
+<img alt="_images/8.png" class="align-center" src="_images/8.png" />
+<p>Вече създадохме своя собствен свят, където да поставим своите блокове.</p>
+<p><strong>Стъпка 5.</strong></p>
+<p>Зада можем да програмираме в Minecraft, трябва да впишем буквата <strong>“c”</strong>. Прозорецът <strong>Code Builder</strong> ще се появи с листа от приложения, които можете да използвате за кодиране. Изберете <strong>Microsoft MakeCode</strong>:</p>
+<img alt="_images/12.png" class="align-center" src="_images/12.png" />
+<p>Началният екран на MakeCode  ще се появи на прозореца Code Builder.</p>
+<img alt="_images/13.png" class="align-center" src="_images/13.png" />
+<p>Изберете опцията New Project от листа <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">Projects</span></code>, за да създадем нов проект. Ако искате да тествате други програми, можете да изберете една от съществуващите в листа <code class="docutils literal notranslate"><span class="pre">Tutorials</span></code>.</p>
+<p>Щом сте създали нов проект в Code Builder, MakeCode потребителският интерфейс ще се отвори и ще можете да започнете кодирането:</p>
+<img alt="_images/14.png" class="align-center" src="_images/14.png" />
+<p>За да напишете код в Minecraft: Education Edition, просто натиснете бутона <img alt="Play" src="_images/151.png" /></p>
+</div>
+<div class="section" id="id1">
+<h2>Minecraft потребителски интерфейс<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<img alt="_images/48.png" class="align-center" src="_images/48.png" />
+<p>Контролирате всичко в Minecraft със своята клавиатура, коята ви позволява да се движите и да изпълнявате различни задачи.</p>
+<p>Списък на някои команди в Minecraft:</p>
+<p><img alt="ESC" src="_images/16.png" /> - Пауза</p>
+<p><img alt="Slika1" src="_images/17.png" /> - Toolbar Selection <a class="reference internal" href="_images/22.png"><img alt="Tool" src="_images/22.png" style="width: 250px;" /></a></p>
+<p>Q – Drop item (blocks) - оставяне на предмета (блоковете)</p>
+<p>W – Move forward (if you press it twice you can run, or swim if you are in the water) -  движение напред (ако го натиснете два пъти, ще тичате или плувате, ако сте във вода)</p>
+<p>A – Move left - движение наляво</p>
+<p>S – Move backward - движение назад</p>
+<p>E – Inventory - инвентар</p>
+<p>D – Move right - движение надясно</p>
+<p><img alt="Slika2" src="_images/19.png" /> - Отваря чата и командния прозорец</p>
+<p><img alt="Slika3" src="_images/20.png" /> - Героят ще клекне</p>
+<p><img alt="Slika4" src="_images/211.png" /> - Героят ще скочи</p>
+<p>Мишката се използва като контролер за камерата, за да видите заобикалящия свят. Натискането на бутона F5 променя ъгъла на камерата.</p>
+</div>
+<div class="section" id="makecode">
+<h2>MakeCode потребителски интерфейс<a class="headerlink" href="#makecode" title="Permalink to this headline">¶</a></h2>
+<p>Този онлайн редактор предоставя възможността за кодиране в JavaScript  или графично (блоково) програмиране, където командите се наслагват чрез влачене и пускане.</p>
+<p>В средата на екрана е блоковата палитра (1), където всички команди (блокове) са разделени в групи. Отдясно има работен плот (2),  където можете да завлечете команди и да конструирате програми.</p>
+<img alt="_images/25_.png" class="align-center" src="_images/25_.png" />
+<p>Блоковите палитри се състоят от различни категории, разделени по целесъобразност и употреба. Командните блокове са разделени в категории.</p>
+<img alt="_images/26.png" class="align-center" src="_images/26.png" />
+<p>В MakeCode програмите са направени от различни, но свързани, блокове, които са обособени в категории.
+Името на категорията насочва потребителя към типа на командата (блока), включена в тази група. Всички блокове от една категория са от същия цвят.</p>
+<p>Завличаме всеки блок на работния плот, свързваме ги, така че да създадем други блокове според желаната програма. Натисканео на десния бутон на мишката върху блок отваря падащо меню с опцията, която позволява да създадем копие (Duplicate), да добавяме коментари (Add Comment), да трием блокове (Delete Block), както и секция за допълнителна помощ (Help).</p>
+<img alt="_images/32.png" class="align-center" src="_images/32.png" />
+<p>Време е да използваме блоковете и да създадем първата си програма в MakeCode.</p>
+</div>
+<div class="section" id="id2">
+<h2>Проекти<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>В следващите указания ще ви представим някои интересни проекти за програмиране на Minecraft чрез платформата MakeCode. Всички проекти се изпълняват стъпка по стъпка, за да може всеки да ги повтори. Всички процедури за конструиране на проекти са разработени-от създаването на програмата до тестването и.</p>
+<blockquote>
+<div><div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Hello World.html">Задача - Здравей, Свят</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Planting Trees.html">Задача-Засаждане на дървета</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - How many trees are there.html">Задача-Колко са дръвчетата?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Pillar.html">Задача-Колона</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Hot and Cold.html">Задача-Топло и студено</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Project Task - Fahrenheit.html">Задача-Фаренхайт</a></li>
+</ul>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Задача-Средното копче' data-toggle="tooltip"><a href="Project Task - Middle Button.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - Задача - Здравей, Свят' data-toggle="tooltip"><a href="Project Task - Hello World.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Задача-Средното копче' data-toggle="tooltip"><a href="Project Task - Middle Button.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - Задача - Здравей, Свят' data-toggle="tooltip"><a href="Project Task - Hello World.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

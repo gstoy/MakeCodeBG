@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Project Task - the Wire &#8212; Block-based programming in MakeCode</title>
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/activecode.css" />
+    <link rel="stylesheet" type="text/css" href="_static/codemirror.css" />
+    <link rel="stylesheet" type="text/css" href="_static/clickable.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pytutor.css" />
+    <link rel="stylesheet" type="text/css" href="_static/modal-basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/datafile.css" />
+    <link rel="stylesheet" type="text/css" href="_static/dragndrop.css" />
+    <link rel="stylesheet" type="text/css" href="_static/fitb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/matrixeq.css" />
+    <link rel="stylesheet" type="text/css" href="_static/parsons.css" />
+    <link rel="stylesheet" type="text/css" href="_static/lib/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="_static/poll.css" />
+    <link rel="stylesheet" type="text/css" href="_static/showEval.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabbedstuff.css" />
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/video.css" />
+    <link rel="stylesheet" type="text/css" href="_static/karel.css" />
+    <link rel="stylesheet" type="text/css" href="_static/notes.css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-4.0.0-dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/flatly.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/petlja.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/CLDRPluralRuleParser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="_static/jquery_i18n/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="_static/activecode-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/timed_activecode.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/mchoice-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/dragndrop-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/fitb-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/matrixeq.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/hammer.min.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/timedparsons.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/timed_shortanswer.js"></script>
+    <script type="text/javascript" src="_static/showEval.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="_static/runestonevideo.js"></script>
+    <script type="text/javascript" src="_static/karelCorner.js"></script>
+    <script type="text/javascript" src="_static/karelRobot.js"></script>
+    <script type="text/javascript" src="_static/karelWorld.js"></script>
+    <script type="text/javascript" src="_static/karelRobotDrawer.js"></script>
+    <script type="text/javascript" src="_static/karelUI.js"></script>
+    <script type="text/javascript" src="_static/karel.js"></script>
+    <script type="text/javascript" src="_static/karel-i18n.en.js"></script>
+    <script type="text/javascript" src="_static/notes.js"></script>
+    <script type="text/javascript" src="_static/pygamelib-init.js"></script>
+    <script type="text/javascript" src="_static/blockly/blockly_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/blocks_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/python_compressed.js"></script>
+    <script type="text/javascript" src="_static/blockly/msg-sr.js"></script>
+    <script type="text/javascript" src="_static/blockpy/utilities.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_errors.js"></script>
+    <script type="text/javascript" src="_static/blockpy/ast_node_visitor.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter.js"></script>
+    <script type="text/javascript" src="_static/blockpy/pytifa.js"></script>
+    <script type="text/javascript" src="_static/blockpy/abstract_interpreter_definitions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/python_to_blockly.js"></script>
+    <script type="text/javascript" src="_static/blockpy/imported.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/class.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comment.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/comprehensions.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/dict.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/if.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/io.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/lists.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/sets.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/loops.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/parking.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/tuple.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/turtles.js"></script>
+    <script type="text/javascript" src="_static/blockpy/blocks/text.js"></script>
+    <script type="text/javascript" src="_static/blockpy-modal.js"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-4.0.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="EV3-основни характерристики и икомпоненти" href="MakeCode and EV3.html" />
+    <link rel="prev" title="Задача-Алармата" href="Project Task - the House Alarm.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<link rel="shortcut icon" href="_static/favicon.ico" type="image/ico" />
+
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'MakeCode';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+  eBookConfig.basecourse = 'MakeCode';
+  eBookConfig.runestone_version = '3.1.1';
+  eBookConfig.imagesDir = '_images/';
+  eBookConfig.staticDir = '_static/';
+  if(typeof(Sk) != "undefined")
+      Sk.imgPath = eBookConfig.imagesDir;
+</script>
+
+<div id="fb-root"></div>
+
+
+
+  </head><body>
+
+
+<!-- Begin navbar -->
+
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+     <img src="_static/img/logo.png" style="width:80px; height: 80px;"> 
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-top: 10px; margin-left: 25px;">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="./">Block-based programming in MakeCode</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<br/>
+
+
+<div class="container col-md-12" id="continue-reading"></div>
+
+<div class="container col-md-8 col-md-offset-2" id="main-content">
+  
+  <div class="section" id="project-task-the-wire">
+<h1>Project Task - the Wire<a class="headerlink" href="#project-task-the-wire" title="Permalink to this headline">¶</a></h1>
+<p>Срещаме проблеми при моториката (по-бавни реакции, непохватност и невъзможност за изпълнени е на определни дейности) почти всекидневно. Много професии днес изискват стабилна ръка. Например, архитекти, заварчици, зъболекари, хирурзи трябва да имат стабилна ръка за успеха на своите начинания. Двигателните проблеми са особено изразени, когато става дума за недоминантната ръка.</p>
+<p>Проучванията посочват, че 96% от световната популация използва своята дясна ръка. Повечето от тези хора напълно неглижират лявата си ръка, съществува реална невъзможност за изпълнение на много дейности, които изискват прецизност.</p>
+<p>Един от начините за преодоляване на този проблем е устройство, наречено „Жицата“, с което човек може да упржнява своята моторика, получавайки обратна връзка за своя прогрес в изпълнението на задачата си. С помощта на това устройство всеки може да работи върху своята концентрация и прецизни движения. В зависимост от обратната връзка, потребителят може да установи дали той/тя е дестатъчно сръчен/а или дали има проблеми с моториката и е нужно повече упражнение.</p>
+<p>За конструирането на устройството ще са нужни:</p>
+<ul class="simple">
+<li><p>4 Micro:bitа</p></li>
+<li><p>Крокодилчета</p></li>
+<li><p>Различни по големина жици</p></li>
+<li><p>Дървена основа или стиропор</p></li>
+<li><p>Колонка или слушалки</p></li>
+<li><p>Щипка (кука)</p></li>
+</ul>
+<p>За да направим устройството, първо ще трябва да направим устройство от жици, дърво и Micro:bit-и, на което да упражняваме моторните си движения.</p>
+<a class="reference internal image-reference" href="_images/z4.jpg"><img alt="_images/z4.jpg" class="align-center" src="_images/z4.jpg" style="width: 500px;" /></a>
+<p><strong>Свързване на Micro:bit-овете</strong></p>
+<p>След като се запознахме с основните характеристики и компоненти на Micro:bit-овете, можем да продължим с конструкцията на устройството. Трябва да свържем Micro:bit-овете, използвайки крокодилски щипки на гореспоменатата конфигурация.
+Ще свържем първия Micro:bit чрез заземяването (GND) към жицата, използвайки крокодилски щипки. Фигурата отдолу показва връзката между заземяването и Micro:bit-а (само за едно устройство).</p>
+<a class="reference internal image-reference" href="_images/z3.jpg"><img alt="_images/z3.jpg" class="align-center" src="_images/z3.jpg" style="width: 500px;" /></a>
+<p>Допълнително, ще трябва да свържем Micro:bit-а с частта от устройството, която тества двигателните умения (куката).
+Щом „Жицата“ е конструирана, време е да създадем програма за всеки Micro:bit.</p>
+<a class="reference internal image-reference" href="_images/z5.jpg"><img alt="_images/z5.jpg" class="align-center" src="_images/z5.jpg" style="width: 500px;" /></a>
+<p><strong>Програмиране</strong></p>
+<p>Всике от четирите Micro:bit-а трябва да бъде програмирана индивидуално:</p>
+<p>1.Първият засича и брои направените от потребителя грешки.
+2.Вторият дава начало на брояча на времето.
+3.Третият го измерва.
+4.Четвъртият издава сигнал, щом потребителят направи грешка.</p>
+<p><strong>Стъпка 1</strong></p>
+<p>Отидете на <a class="reference external" href="https://makecode.microbit.org/">https://makecode.microbit.org/</a>.</p>
+<p><strong>Съпка 2</strong></p>
+<p>Създайте нов проект.
+Искаме да програмираме засичане на грешки, по-точно, да засечем, използвайки Micro:bit, кога куката докосва главната жица.
+Базирайки се на физическото устройство, можем да заключим, че пинът <code class="docutils literal notranslate"><span class="pre">P0</span></code> дава начало на всички събития.</p>
+<p>След като пинът <code class="docutils literal notranslate"><span class="pre">P0</span></code> е свързан чрез крокодилски щипки към куката, грешкатасе засича при докосване на основната жица и Micro:bit-ът трябва а покаже кръст (засичане на грешка).</p>
+<p><strong>Стъпка 3</strong></p>
+<p>От категория <img alt="Input" src="_images/s6.png" /> избираме блока <img alt="press" src="_images/310.png" /> и от падащото меню избираме пина <code class="docutils literal notranslate"><span class="pre">P0</span></code>.</p>
+<p>Този блок ще задейства визуализирането на грешката.</p>
+<p><strong>Стъпка 4</strong></p>
+<p>Сега трябва да добавим блока, показващ кръста, на екрана. Той ще показва кога потребителят докосва основната жица с куката.
+Изберете категория <img alt="Basic" src="_images/s2.png" /> и блока <img alt="leds" src="_images/s12.png" />.</p>
+<p>Кодът и симулаторът за грешки:</p>
+<img alt="_images/4_5.png" class="align-center" src="_images/4_5.png" />
+<p>В кода ще добавим блока за паузиране, с който ще осигурим своевременна системна реакция.
+Изберете категорията <img alt="Basic" src="_images/s2.png" /> и блока <img alt="Pause" src="_images/s39.png" /> където можем да настроим отмерването на времето в милисекунди (1000 милисек. = 1 сек).</p>
+<p>Кодът изглежда така:</p>
+<img alt="_images/710.png" class="align-center" src="_images/710.png" />
+<p><strong>Стъпка 5</strong></p>
+<p>Горната част на кода посочва само засичането на направената грешка от докосването на куката и жицата.</p>
+<p>Сега ще добавим частта, която ще брои колко пъти потребителят ще сбърка. За да изпълним това изискване, трябва да намерим начин да съхраняваме, ако е нужно, да променяме този брой. Решението на този проблем е въвеждането на променлива.</p>
+<p>Променливата може да бъде разбрана като пространство в компютърната памет, нещо като кутия, в което съхраняваме временни стойности по време на изпълнението на програмата. Променливите имат имена. Когато искаме да използваме стойността на променливата, достатъчно е да употребим нейното име.</p>
+<p>Променлива се създава по следния начин: в категорията Variables (1) натискаме бутон Make a variable (2) и вписваме името на тази променлива в полето (3), в нашия случай-името на тона. Натискайки бутона ОК (4), създаваме променлива (5).</p>
+<img alt="_images/s291.png" class="align-center" src="_images/s291.png" />
+<p><strong>Стъпка 6</strong></p>
+<p>В началото на упражнението, числото на брояча ще бъде 0. Настройването на началната стойност ще се определя от потребителя чрез натискането на копчето А. Това означава, че когато той натисне бутона на Micro:bit-а броячът ще върне числото на 0 и отново можем да повторим упражнението.</p>
+<p>От категорията <img alt="Input" src="_images/s6.png" /> изберете блока <img alt="Button" src="_images/131.png" />, и от падащото меню избираме бутона А.</p>
+<p>Този блок ще задейства нулирането на <strong>брояча</strong>.</p>
+<p>От категорията <code class="docutils literal notranslate"><span class="pre">Variables</span></code> ще влачим блока  <img alt="set" src="_images/142.png" />.</p>
+<p>Ще свържем този блок с горния  и с блока, представящ стойността на променливата. От категорията <img alt="Basic" src="_images/s2.png" /> избираме блока <img alt="prikaz" src="_images/15.png" /> , в който завличаме блок <img alt="brojac" src="_images/162.png" /> от категория <code class="docutils literal notranslate"><span class="pre">Variables</span></code>, и ще го поставим на мястото с въведената 0.
+Така създаваме блок, който показва стойността на променливата <strong>Брояч (Counter)</strong>.</p>
+<p>Част от този код за нулиране и показване на променливата <strong>Counter</strong>:</p>
+<img alt="_images/181.png" class="align-center" src="_images/181.png" />
+<p><strong>Стъпка 7</strong></p>
+<p>Можем да използваме променивата Counter, чиято начална стойност е 0, да брои грешките.стойността на тази променлива ще расте с 1 всеки път, щом потребителят сгреши, или всеки път щом куката докосне основната жица.
+За тази цел използваме блока <img alt="change" src="_images/192.png" /> от категория <code class="docutils literal notranslate"><span class="pre">Variables</span></code>.</p>
+<p>Ще завлечем този блок в частта на кода, в която засичаме грешка и показваме знака Х.</p>
+<p>В симулатора кодът изглежда така:</p>
+<img alt="_images/202122.png" class="align-center" src="_images/202122.png" />
+<p><strong>Стъпка 8</strong></p>
+<p>В тази стъпка ще обновим проекта, добавяйки звуков сигнал при грешка на потребителя.</p>
+<p>Ще направим връзката между два Micro:bit-а, за да използваме радио комуникацията между тях. Първо ще създадем ID група-пространството на комуникация между Micro:bit-овете. За да създадем ID група, трябва да влачим блока <img alt="radioset" src="_images/232.png" /> от категория <img alt="Radio" src="_images/s211.png" />.  Всяко число може да бъде избрано. Ние ще оставим 1 като IDна групата. Ще завлечем този блок в блока <img alt="Forever" src="_images/s2.png" /> от категория <img alt="Basic" src="_images/s2.png" />.</p>
+<p>Частта от кода, която създава групата за комуникация:</p>
+<img alt="_images/241.png" class="align-center" src="_images/241.png" />
+<p>За да изратим радио сигнал на друго устройство, което ще реагира спрямо този сигнал, издавайки звук при грешка, ще трябва да въведем блок в секцията на кода, която засича и брои грешки.</p>
+<p>Обновен, кодът изглежда така:</p>
+<img alt="_images/261.png" class="align-center" src="_images/261.png" />
+<p>Завършеният код за Micro:bit 1:</p>
+<img alt="_images/272.png" class="align-center" src="_images/272.png" />
+<p>Свалете файлът .hex на компютъра си, натискайки бутона <img alt="dugme1" src="_images/282.png" /> или <a class="reference internal" href="_images/291.png"><img alt="dugme2" src="_images/291.png" style="width: 199px;" /></a>. Micro:bit-ът ще бъде готов да започне работа, щом завлачите файла в него.</p>
+<p><strong>Стъпка 9</strong></p>
+<p>Сега трябва да създадем програма за другия Micro:bit, който ще контролира звука при направена грешка от потребителя.
+Нашите Micro:bit-ове ще комуникират в ID група 1.</p>
+<p>Ще завлечем блока <img alt="radioset" src="_images/232.png" /> от категория <img alt="Radio" src="_images/s211.png" /> в блока <img alt="Forever" src="_images/s2.png" /> от категория <img alt="Basic" src="_images/s2.png" />.</p>
+<p>Тази част от кода за комуникационната група:</p>
+<img alt="_images/241.png" class="align-center" src="_images/241.png" />
+<p>Следващата стъпка е този Micro:bit да получава информация (в нашия случай- число), на която да се основава реакцията му-издаване на звук. За тази цел ще влачим блок от категорията <img alt="Radio" src="_images/s211.png" /> :</p>
+<img alt="_images/301.png" class="align-center" src="_images/301.png" />
+<p>В този блок ще завлечем блока  <img alt="Play" src="_images/31_.png" />, който възпроизвежда звука от категорията <img alt="Music" src="_images/s66.png" />.
+От падащото меню на този блок ще изберем тона и продължителността му.</p>
+<img alt="_images/3132.png" class="align-center" src="_images/3132.png" />
+<p>Този код ще изглежда така:</p>
+<img alt="_images/331.png" class="align-center" src="_images/331.png" />
+<p><strong>Забележка</strong>: за възпроизводство на звука е нужно Micro:bit да бъде свързан с тонколоните/слушалките, както следва:</p>
+<img alt="_images/34.png" class="align-center" src="_images/34.png" />
+<p>Пълният код за Micro:bit-а, който има активиран звука:</p>
+<img alt="_images/351.png" class="align-center" src="_images/351.png" />
+<p>По този начин сме създали регистриране , броене и звукова сигнализация за направените от потребителя грешки.</p>
+<p><strong>Стъпка 10</strong></p>
+<p>За да създадем устройство, което ще измери колко време ще е нужно на потребителя да изпълни упражнението на своите двигателни умения, трябва да въведем още две Micro:bit устройства. Едното само ще задейства брояча, намиращ се на другото.</p>
+<p>Натискайки бутона А, устройството се нулира и екранът се изчиства.  Опцията <code class="docutils literal notranslate"><span class="pre">reset</span></code> се намира в категория <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">-</span> <span class="pre">Control</span></code>.</p>
+<p>Опция за изчистване на екрана е субкатегорията <code class="docutils literal notranslate"><span class="pre">More</span> <span class="pre">в</span> <span class="pre">категорията</span></code>  <img alt="Basic" src="_images/s2.png" />.</p>
+<p>Част от кода:</p>
+<img alt="_images/371.png" class="align-center" src="_images/371.png" />
+<p>Тогава създаваме пространство за комуникацията с ID група 50:</p>
+<img alt="_images/361.png" class="align-center" src="_images/361.png" />
+<p><code class="docutils literal notranslate"><span class="pre">P1</span></code> е пинът свързан с крокодилчетата.
+Този пин ще се използва за задействане на брояча. Когато куката докосне жицата, изпраща радио сигнал, който стартира времето. За да види потребителят, че времето е започнало да тече, се появява знакът <img alt="slika" src="_images/37_.png" /> на екрана на Micro:bit-а.</p>
+<p>Пълният код за Micro:bit, сигнализиращ за началото на броенето на време:</p>
+<img alt="_images/391.png" class="align-center" src="_images/391.png" />
+<p><strong>Стъпка 11</strong></p>
+<p>Трябват ни две променливи:</p>
+<ul class="simple">
+<li><p>Променливата <strong>Време/ Time</strong> , която ще измери времето от началото на упражнението чрез брояч, задействан от сигнал, получен от другия Micro:bit.</p></li>
+<li><p>Променливата <strong>Брояч/ Counter</strong> , която може да приема две стойности- true и false, т.е. жицата е била или не е била докосната.</p></li>
+</ul>
+<p>Натискането на бутона А нулира устройството и задава началната стойност на промеливите <strong>Време/ Time</strong> и <strong>Брояч/ Counter</strong>.
+Стойности за променливата <strong>Counter</strong> можем да намерим в категорията <img alt="Logic" src="_images/s4.png" />:</p>
+<img alt="_images/401.png" class="align-center" src="_images/401.png" />
+<p>Следващата стъпка е да създадем пространство за комуникация с ID групата 50:</p>
+<img alt="_images/361.png" class="align-center" src="_images/361.png" />
+<p>Пинът <code class="docutils literal notranslate"><span class="pre">P1</span></code> е свързан с куката чраз крокодилски щипки. Той ще даде началото на отмерването на времето:</p>
+<img alt="_images/411.png" class="align-center" src="_images/411.png" />
+<p>Щом потребителят натисне бутона В, времето, което му отнема да изпълни “упражнението”, ще се покаже:</p>
+<img alt="_images/422.png" class="align-center" src="_images/422.png" />
+<p>Когато Micro:bit-ът получи радио сигнала (числото) от другия Micro:bit, часовникът ще започне и стойността на променливата <strong>Време</strong> ще се сменя с 1 след всяка изминала секунда до края на упражнението:</p>
+<img alt="_images/432.png" class="align-center" src="_images/432.png" />
+<p>Крайният код за Micro:bit-а, който измерва времето от началото на “играта”:</p>
+<img alt="_images/43_.png" class="align-center" src="_images/43_.png" />
+<p>Когато прехвърлите всички кодове на своите Micro:bit-ове, ще сте готови да тествате свите двигателни умения и да проверите как ще се справите със задачата с по-слабата си ръка.</p>
+</div>
+
+
+  
+      <div class="col-md-12">
+<ul class="pager">
+        <li id="relations-prev" title='Previous chapter - Задача-Алармата' data-toggle="tooltip"><a href="Project Task - the House Alarm.html">Previous chapter</a></li>
+    
+        <li id="relations-next" title='Next chapter - EV3-основни характерристики и икомпоненти' data-toggle="tooltip"><a href="MakeCode and EV3.html">Next chapter</a></li>
+</ul>
+
+<!-- <ul class="pager"> -->
+    <!-- -->
+        <!-- <li id="relations-prev" title='Претходно поглавље - Задача-Алармата' data-toggle="tooltip"><a href="Project Task - the House Alarm.html">Претходно поглавље</a></li> -->
+    <!--  -->
+    <!-- -->
+        <!-- <li id="relations-next" title='Следеће поглавље - EV3-основни характерристики и икомпоненти' data-toggle="tooltip"><a href="MakeCode and EV3.html">Следеће поглавље</a></li> -->
+    <!-- -->
+<!-- </ul> -->
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+
+</script>
+</div>
+  
+</div>
+<footer class="footer col-md-12">
+    <div class="container">
+        <div class="text-center">
+            <hr>
+            <p class="text-muted">
+                <span class="text-center">&copy; 2019 <a href="https://petlja.org">Petlja.org</a> 
+                  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0; vertical-align: text-bottom" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+                  
+                  (Created using  <a href="https://pypi.org/project/Sphinx/">Sphinx</a>, <a href="http://runestoneinteractive.org/">RunestoneComponents</a> and <a href="https://github.com/Petlja/PetljaDoc">PetljaDoc</a>)</span>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>
